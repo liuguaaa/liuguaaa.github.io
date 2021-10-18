@@ -1,0 +1,2711 @@
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>个人空间 - AcWing</title>
+    
+
+<meta charset="UTF-8">
+<meta name="keywords" content="AcWing,Leetcode,题解,编程,算法">
+<meta name="description" content="一个专属于程序员的平台，为大家在漫漫的刷题之旅中，提供最优质的解答">
+<meta name="baidu-site-verification" content="UW1SBiMHO7">
+<meta name="google-site-verification" content="YTgbOq_0TDShJS6KTcUYCQoAAZTm308SJ7ibsafBD_Y">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" type="image/png" href="https://cdn.acwing.com/static/web/img/favicon.ico">
+<link rel="stylesheet" href="static/css/bootstrap.min.css">
+<link rel="stylesheet" href="static/css/bootstrap-toggle.min.css">
+<link rel="stylesheet" href="static/css/signform.css">
+<link rel="stylesheet" href="static/css/jquery-ui.min.css">
+
+
+<!--link rel="stylesheet" href="https://cdn.acwing.com/static/web/css/pace.css"-->
+<!--script src="https://cdn.acwing.com/static/web/js/pace.js"></script-->
+<script>
+    let onbeforeunload_functions = [];
+</script>
+
+
+<style>
+    /* latin */
+    @font-face {
+      font-family: 'Satisfy';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Satisfy Regular'), local('Satisfy-Regular'), url(static/font/rP2Hp2yn6lkG50LoCZOIHQ.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    /* latin-ext */
+    @font-face {
+      font-family: 'Lato';
+      font-style: italic;
+      font-weight: 400;
+      src: local('Lato Italic'), local('Lato-Italic'), url(static/font/S6u8w4BMUTPHjxsAUi-qJCY.woff2) format('woff2');
+      unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+    /* latin */
+    @font-face {
+      font-family: 'Lato';
+      font-style: italic;
+      font-weight: 400;
+      src: local('Lato Italic'), local('Lato-Italic'), url(static/font/S6u8w4BMUTPHjxsAXC-q.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    /* latin-ext */
+    @font-face {
+      font-family: 'Lato';
+      font-style: italic;
+      font-weight: 700;
+      src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(static/font/S6u_w4BMUTPHjxsI5wq_FQft1dw.woff2) format('woff2');
+      unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+    /* latin */
+    @font-face {
+      font-family: 'Lato';
+      font-style: italic;
+      font-weight: 700;
+      src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(static/font/S6u_w4BMUTPHjxsI5wq_Gwft.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    /* latin-ext */
+    @font-face {
+      font-family: 'Lato';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Lato Regular'), local('Lato-Regular'), url(static/font/S6uyw4BMUTPHjxAwXjeu.woff2) format('woff2');
+      unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+    /* latin */
+    @font-face {
+      font-family: 'Lato';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Lato Regular'), local('Lato-Regular'), url(static/font/S6uyw4BMUTPHjx4wXg.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    /* latin-ext */
+    @font-face {
+      font-family: 'Lato';
+      font-style: normal;
+      font-weight: 700;
+      src: local('Lato Bold'), local('Lato-Bold'), url(static/font/S6u9w4BMUTPHh6UVSwaPGR_p.woff2) format('woff2');
+      unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+    /* latin */
+    @font-face {
+      font-family: 'Lato';
+      font-style: normal;
+      font-weight: 700;
+      src: local('Lato Bold'), local('Lato-Bold'), url(static/font/S6u9w4BMUTPHh6UVSwiPGQ.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+</style>
+<script src="static/js/jquery-3.3.1.min.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
+<script src="static/js/bootstrap-toggle.min.js"></script>
+<script src="static/js/jquery-ui.min.js"></script>
+<script src="static/js/jquery.cookie.js"></script>
+<script>
+    $(document).ready(function () {
+        var csrftoken = $.cookie('csrftoken');
+
+        function csrfSafeMethod(method) {
+            // these HTTP methods do not require CSRF protection
+            return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+        }
+
+        $.ajaxSetup({
+            beforeSend: function(xhr, settings) {
+                if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                    xhr.setRequestHeader("X-CSRFToken", csrftoken);
+                }
+            },
+            cache: true
+        });
+    });
+</script>
+<script src="static/js/signform-0.0.1.js"></script>
+<script src="static/js/handlebars-v1.3.0.js"></script>
+<script src="static/js/effect_anchor.js"></script>
+
+<script>
+    let user_state = {
+        is_authenticated: false,
+        is_mobile: false,
+    };
+    if (user_state.is_authenticated){
+        user_state.user_id = None;
+    }
+    
+</script>
+<script>
+    let GLOBAL_COMMENT_SONS = {};
+</script>
+<style>
+    
+        #acwing_body {
+            background: white url("static/image/background.png") fixed;
+            background-size: auto;
+        }
+    
+
+    
+    @media (min-width: 768px) and (max-width: 1000px) {
+       .collapse {
+           display: none !important;
+       }
+    }
+</style>
+
+
+<link rel="stylesheet" href="static/css/ace.min.css">
+<link rel="stylesheet" href="static/css/martor.min.css">
+
+    <link rel="stylesheet" href="static/css/martor.css">
+
+<link rel="stylesheet" href="static/css/comment.css">
+
+
+    <link rel="stylesheet" href="static/css/style-0.0.12.css">
+
+<link rel="stylesheet" href="static/css/navbar.css">
+
+    
+        
+
+
+    <link rel="stylesheet" href="static/css/index-0.0.9.css">
+
+        <style>
+            .about-index-file-panel {
+                margin: 0;
+                margin-bottom: 20px;
+            }
+        </style>
+    
+</head>
+<body id="acwing_body" style="min-height: 100vh;">
+
+
+
+<div id="acwing_page">
+    <nav class="navbar navbar-inverse navbar-fixed-top navbar-expand-lg" style="z-index: 10;">
+        <div class="container">
+            <!-- Header -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    
+                </button>
+                
+
+                
+                <a class="navbar-brand" href="javascript:;"></a>
+            </div>
+
+            <!-- Items -->
+            <div class="collapse navbar-collapse" id="topNavBar">
+                <ul class="nav navbar-nav">
+                    <li class=""><a href="javascript:;">首页</a></li>
+                    <li class=""><a href="javascript:;">题库</a></li>
+                    <li class=""><a href="javascript:;">题解</a></li>
+                    <li class=""><a href="javascript:;">分享</a></li>
+                    <li class=""><a href="javascript:;">问答</a></li>
+                    <li id="navigation_activity_active_id" class=""><a href="javascript:;">活动</a></li>
+                    <li id="navigation_competition_active_id" class=""><a href="javascript:;">竞赛</a></li>
+                    <li class=""><a href="javascript:;">应用</a></li>
+                    <li class=""><a href="javascript:;">吐槽</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#login-modal">登录/注册</a>
+                        </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="base_body">
+    
+        <div class="container">
+            <div class="row">
+    
+            
+                <div class="col-xs-4 col-sm-4 col-md-3">
+                    
+
+<div class="panel panel-default">
+    <div class="panel-body" align="center">
+        
+            <img class="img-responsive center-block" src="static/picture/94254_lg_82f20f64af.jpg" alt="头像">
+        
+        <hr>
+        <div class="caption">
+            <p class="text-center" style="font-size: 18px; font-weight: 700;">Move.</p>
+            <p class="text-center" style="font-size: 14px; "></p>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-xs-4">
+                <a href="javascript:;" style="text-decoration: none;">
+                    <div class="user-myspace-base-person-info-bottom-item" title="3">
+                        <div class="user-myspace-base-person-info-bottom-item-title">关注数</div>
+                        <div class="user-myspace-base-person-info-bottom-item-content">3</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-xs-4">
+                <a href="javascript:;" style="text-decoration: none;">
+                    <div class="user-myspace-base-person-info-bottom-item" title="2">
+                        <div class="user-myspace-base-person-info-bottom-item-title">粉丝数</div>
+                        <div class="user-myspace-base-person-info-bottom-item-content user-myspace-base-person-info-bottom-item-content-cnt">
+                            2
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-xs-4">
+                <div class="user-myspace-base-person-info-bottom-item-normal" title="2519">
+                    <div class="user-myspace-base-person-info-bottom-item-title">阅读量</div>
+                    <div class="user-myspace-base-person-info-bottom-item-content">2519</div>
+                </div>
+            </div>
+        </div>
+        
+            <br>
+            <label class="btn btn-success text-center" style="border-radius: 5px; font-size: 12px; padding: 5px 20px;" data-toggle="modal" data-target="#login-modal">
+                +关注
+            </label>
+            <label class="btn btn-default text-center" style="margin-left: 20px; border-radius: 5px; font-size: 12px; padding: 5px 20px;" data-toggle="modal" data-target="#login-modal">
+                发消息
+            </label>
+        
+        <br>
+        
+            <p class="personal-info text-right" style="font-size: 12px; color: grey; padding-top: 5px;" title="在线">
+                在线&nbsp;
+                <span class="glyphicon glyphicon-ok" style="background-color: springgreen; color: white; min-width: 10px; border-radius: 20px; padding: 2px; font-size: 5px;"></span>
+            </p>
+        
+        <hr>
+        <div class="user-myspace-base-person-visit-record">
+            <div class="user-myspace-base-person-visit-record-head"></div>
+            <div class="user-myspace-base-person-visit-record-body">
+                
+                    <div class="user-myspace-base-person-visit-record-body-items" title="1天前" data-user-id="85361">
+                        <div class="user-myspace-base-person-visit-record-body-items-photo">
+                           
+                        </div>
+                        <div class="user-myspace-base-person-visit-record-body-items-username">
+                       
+                        </div>
+                    </div>
+                
+                    <div class="user-myspace-base-person-visit-record-body-items" title="28天前" data-user-id="86577">
+                        <div class="user-myspace-base-person-visit-record-body-items-photo">
+               
+                        </div>
+                        <div class="user-myspace-base-person-visit-record-body-items-username">
+             
+                        </div>
+                    </div>
+                
+                    <div class="user-myspace-base-person-visit-record-body-items" title="1个月前" data-user-id="94255">
+                        <div class="user-myspace-base-person-visit-record-body-items-photo">
+                     
+                        </div>
+                        <div class="user-myspace-base-person-visit-record-body-items-username">
+                 
+                        </div>
+                    </div>
+                
+                    <div class="user-myspace-base-person-visit-record-body-items" title="1个月前" data-user-id="115698">
+                        <div class="user-myspace-base-person-visit-record-body-items-photo">
+
+                        </div>
+                        <div class="user-myspace-base-person-visit-record-body-items-username">
+                       
+                        </div>
+                    </div>
+                
+                    <div class="user-myspace-base-person-visit-record-body-items" title="3个月前" data-user-id="75806">
+                        <div class="user-myspace-base-person-visit-record-body-items-photo">
+
+                        </div>
+                        <div class="user-myspace-base-person-visit-record-body-items-username">
+                      
+                        </div>
+                    </div>
+                
+                <script>
+                    $(document).ready(function () {
+                        $('.user-myspace-base-person-visit-record-body-items').click(function () {
+                            let user_id = $(this).attr('data-user-id');
+                            window.open(`/user/myspace/index/${user_id}/`);
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+</div>
+                </div>
+            
+            
+                <div class="col-xs-8 col-sm-8 col-md-9">
+            
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <ul class="nav nav-tabs" style="font-size: 17px;">
+                            <li role="presentation" class="active">
+                                <a href="javascript:;" class="user-myspace-base-subtitle">动态</a>
+                            </li>
+                            <li role="presentation" class="">
+                                <a href="javascript:;" class="user-myspace-base-subtitle">题解</a>
+                            </li>
+                            <li role="presentation" class="">
+                                <a href="javascript:;" class="user-myspace-base-subtitle">分享</a>
+                            </li>
+                            <li role="presentation" class="">
+                                <a href="javascript:;" class="user-myspace-base-subtitle">视频</a>
+                            </li>
+                            <li role="presentation" class="">
+                                <a href="javascript:;" class="user-myspace-base-subtitle">问答</a>
+                            </li>
+                            <li role="presentation" class="">
+                                <a href="javascript:;" class="user-myspace-base-subtitle">活动</a>
+                            </li>
+                            <li role="presentation" class="">
+                                <a href="javascript:;" class="user-myspace-base-subtitle">竞赛</a>
+                            </li>
+                            
+                            
+                            
+                        </ul>
+                        <br>
+                        
+        
+            <div class="row">
+                <div id="file_display_field" style="padding-left: 20px; padding-right: 20px;">
+                    
+                        
+
+<div id="file-content-abstract-field-3083786" class="panel panel-default about-index-file-panel">
+    <div class="panel-body about-index-file-panel-body">
+        <div class="about-index-file-type">
+            活动打卡代码
+            <a href="javascript:;" target="_blank"><span class="file-field-title pull-right">AcWing 1497. 树的遍历</span></a>
+        </div>
+        <hr style="margin: 0 0 10px 0;">
+        <div class="row" style="margin: 0">
+            <div class="col-xs-2 col-sm-1">
+                <a href="" target="_blank">
+                    <img class="img-circle" src="static/picture/94254_md_82f20f64af.jpg" alt="Move.的头像" width="45px">
+                </a>
+            </div>
+            <div class="col-xs-10 col-sm-11">
+                <a href="" target="_blank">
+                    <span class="about-index-file-panel-username">Move.</span>
+                </a>
+                <br>
+                <span title="2021-10-17 18:07">
+                    <span class="about-index-file-panel-time">21小时前</span>
+                </span>
+            </div>
+        </div>
+        <div style="padding-left: 45px;">
+            
+                
+
+<div id="file-content-field-3083786" class="file-content-field">
+    <div class="main-martor main-martor-content" data-field-name="content">
+        <div class="section-martor">
+            <div id="file-martor-field-3083786" class="ui bottom attached tab active martor-preview" data-tab="preview-tab-content">
+                <pre><code>#include &lt;bits/stdc++.h&gt;
+using namespace std;
+const int N = 50;
+unordered_map &lt;int,int&gt; l,r,pos;
+int postorder[N],inorder[N];
+int build(int il,int ir,int pl,int pr)
+{
+    int root = postorder[pr];
+    int k = pos[root];
+    if(k &gt; il) l[root] = build(il,k-1,pl,pl+k-il-1);
+    if(k &lt; ir) r[root] = build(k+1,ir,pl+k-il,pr-1);
+    return root;
+}
+void bfs(int root)
+{
+    queue &lt;int&gt; q;
+    q.push(root);
+    while(!q.empty())
+    {
+        auto t = q.front();
+        q.pop();
+        cout &lt;&lt; t &lt;&lt; ' ';
+        if(l.count(t)) q.push(l[t]);
+        if(r.count(t)) q.push(r[t]);
+    }
+}
+int main()
+{
+    int n;
+    cin &gt;&gt; n;
+    for(int i=0;i&lt;n;i++)
+        cin &gt;&gt; postorder[i];
+
+    for(int i=0;i&lt;n;i++)
+    {
+        cin &gt;&gt; inorder[i];
+        pos[inorder[i]] = i;
+    }
+    int root = build(0,n-1,0,n-1);
+    bfs(root);
+    return 0;
+}
+</code></pre>
+            </div>
+        </div><!-- end  /.section-martor -->
+    </div>
+</div>
+<a id="file-content-filed-more-btn-3083786" style="display: none; margin-left: -30px; cursor: pointer;">展开</a>
+<script>
+    $(document).ready(function () {
+
+        $('#file-martor-field-3083786 > pre').each(function(i, block){
+            hljs.highlightBlock(block);
+        });
+
+        let math_elemtnt = document.getElementById("file-martor-field-3083786");
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub, math_elemtnt]);
+
+        let $block = $("#file-content-field-3083786");
+        let $btn =  $('#file-content-filed-more-btn-3083786');
+
+        $block.find("img").on('click', function() {
+          $('#overlay')
+            .css({backgroundImage: `url(${this.src})`})
+            .addClass('open')
+            .one('click', function() { $(this).removeClass('open'); });
+        });
+
+        $block.find("img").css("cursor", "pointer");
+
+        let $max_height = 300;
+        
+
+        if ($block.height() >= $max_height){
+           $btn.show();
+        }
+        $btn.click(function () {
+            if ($(this).text() === "展开") {
+                $block.animate({"max-height" : $block.prop("scrollHeight")});
+                $(this).text("收起");
+            } else {
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $("#file-content-abstract-field-3083786").offset().top - 55 - $(window).height() * 0.1
+                });
+                $block.animate({"max-height" : $max_height + "px"});
+                $(this).text("展开");
+            }
+        });
+    });
+</script>
+            
+        </div>
+        <hr style="margin: 10px 0 0 0;">
+        <div class="btn-group btn-group-justified" role="group" style="padding-bottom: 5px;">
+            <div class="btn-group" role="group">
+                
+    <a class="btn btn-link" title="赞" style="cursor: pointer;" data-toggle="modal" data-target="#login-modal">
+        <span class="glyphicon glyphicon-heart-empty form_vote_3083786_heart" style="top: 2px;"></span>
+        &nbsp;
+        <span class="form_vote_3083786_votecnt">
+            
+                赞
+            
+        </span>
+    </a>
+
+            </div>
+            <div class="btn-group" role="group">
+                <a id="comment_field_btn_3083786" class="btn btn-link" title="评论">
+    <span class="file_commentcnt glyphicon glyphicon-comment" style="top: 2px;"></span> &nbsp;
+    <span id="file_commentcnt_3083786">
+        
+            评论
+        
+    </span>
+</a>
+            </div>
+            <div class="btn-group" role="group">
+                
+    <a class="btn btn-link" title="收藏" style="cursor: pointer;" data-toggle="modal" data-target="#login-modal">
+        <span class="glyphicon glyphicon-star-empty form_collect_3083786_star" style="top: 2px;"></span>
+        &nbsp;
+        <span class="form_collect_3083786_collectcnt">
+            
+                收藏
+            
+        </span>
+    </a>
+
+            </div>
+        </div>
+        <hr style="margin: 0 0 10px 0;">
+        <div id="comment_field_3083786" style="background-color: #f8f8f8; margin: -10px; padding: 10px; display: none;">
+            
+
+
+<h3 style="font-weight: normal; margin: 10px 0 30px 0;">0 评论</h3>
+<div class="row">
+    <div class="col-md-1 col-sm-2 col-xs-3">
+        
+    </div>
+    
+        <div class="col-xs-12">
+            <form class="comment_reply_form" role="form" enctype="multipart/form-data">
+                <input type="hidden" name="csrfmiddlewaretoken" value="jFJtIzYe2uFVLw3wPbweW9Vs6pPXlAeaTEHvizGaA0T8EnZrvB02HVhVoVarzFyV">
+                <div data-toggle="modal" data-target="#login-modal">
+                    <textarea class="file-comment" name="content" cols="40" rows="2" maxlength="10000" required="" title="回复" placeholder="在这里写评论...（支持MarkDown和Latex语法）"></textarea>
+                </div>
+            </form>
+            <div class="col-md-offset-10 col-md-2 col-sm-offset-9 col-sm-3 col-xs-offset-7 col-xs-5">
+                <button class="form-control btn btn-link" style="border-radius: 5px" data-toggle="modal" data-target="#login-modal">
+                    提交评论
+                </button>
+            </div>
+        </div>
+    
+</div>
+<div id="comment_list_field_3083786">
+    
+</div>
+        </div>
+        <script>
+            $(document).ready(function () {
+                $('#comment_field_btn_3083786').click(function () {
+                    let $comment_field = $("#comment_field_3083786");
+                    $comment_field.slideToggle(500, function () {
+                        if ($comment_field.length > 0) {
+                            $('#comment_reply_form_top_3083786 > textarea').focus();
+                        }
+                    });
+                });
+            });
+        </script>
+    </div>
+</div>
+                    
+                        
+
+<div id="file-content-abstract-field-3069176" class="panel panel-default about-index-file-panel">
+    <div class="panel-body about-index-file-panel-body">
+        <div class="about-index-file-type">
+            题解
+            <a href="javascript:;" target="_blank"><span class="file-field-title pull-right">AcWing 1479. 最大子序列和</span></a>
+        </div>
+        <hr style="margin: 0 0 10px 0;">
+        <div class="row" style="margin: 0">
+            <div class="col-xs-2 col-sm-1">
+                <a href="" target="_blank">
+                    <img class="img-circle" src="static/picture/94254_md_82f20f64af.jpg" alt="Move.的头像" width="45px">
+                </a>
+            </div>
+            <div class="col-xs-10 col-sm-11">
+                <a href="" target="_blank">
+                    <span class="about-index-file-panel-username">Move.</span>
+                </a>
+                <br>
+                <span title="2021-10-15 13:46">
+                    <span class="about-index-file-panel-time">3天前</span>
+                </span>
+            </div>
+        </div>
+        <div style="padding-left: 45px;">
+            
+                
+
+<div id="file-content-field-3069176" class="file-content-field">
+    <div class="main-martor main-martor-content" data-field-name="content">
+        <div class="section-martor">
+            <div id="file-martor-field-3069176" class="ui bottom attached tab active martor-preview" data-tab="preview-tab-content">
+                <h3>emmmm 写了个前缀和 A了？</h3>
+<pre><code>#include &lt;bits/stdc++.h&gt;
+using namespace std;
+const int N = 100010;
+int n;
+int a[N];
+int s[N];
+int main()
+{
+    cin &gt;&gt; n;
+    for(int i=1;i&lt;=n;i++)
+       cin &gt;&gt; a[i];
+    for(int i=1;i&lt;=n;i++)
+        s[i] = s[i-1] + a[i];
+    int maxx = -1e9;
+    int l = 0 , r = 0;
+    for(int i=1;i&lt;=n;i++)
+        for(int j=i;j&lt;=n;j++)
+        {
+            if(maxx &lt; s[j] - s[i - 1])
+            {
+                maxx = s[j] - s[i - 1];
+                l = i , r = j;
+            }
+        }
+    if(maxx &gt;= 0)
+        cout &lt;&lt; maxx &lt;&lt; ' ' &lt;&lt; a[l] &lt;&lt; ' ' &lt;&lt; a[r] &lt;&lt; endl;
+    else cout &lt;&lt; 0 &lt;&lt; ' ' &lt;&lt; a[1] &lt;&lt; ' ' &lt;&lt; a[n] &lt;&lt; endl;
+    return 0;
+}
+</code></pre>
+            </div>
+        </div><!-- end  /.section-martor -->
+    </div>
+</div>
+<a id="file-content-filed-more-btn-3069176" style="display: none; margin-left: -30px; cursor: pointer;">展开</a>
+<script>
+    $(document).ready(function () {
+
+        $('#file-martor-field-3069176 > pre').each(function(i, block){
+            hljs.highlightBlock(block);
+        });
+
+        let math_elemtnt = document.getElementById("file-martor-field-3069176");
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub, math_elemtnt]);
+
+        let $block = $("#file-content-field-3069176");
+        let $btn =  $('#file-content-filed-more-btn-3069176');
+
+        $block.find("img").on('click', function() {
+          $('#overlay')
+            .css({backgroundImage: `url(${this.src})`})
+            .addClass('open')
+            .one('click', function() { $(this).removeClass('open'); });
+        });
+
+        $block.find("img").css("cursor", "pointer");
+
+        let $max_height = 300;
+        
+
+        if ($block.height() >= $max_height){
+           $btn.show();
+        }
+        $btn.click(function () {
+            if ($(this).text() === "展开") {
+                $block.animate({"max-height" : $block.prop("scrollHeight")});
+                $(this).text("收起");
+            } else {
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $("#file-content-abstract-field-3069176").offset().top - 55 - $(window).height() * 0.1
+                });
+                $block.animate({"max-height" : $max_height + "px"});
+                $(this).text("展开");
+            }
+        });
+    });
+</script>
+            
+        </div>
+        <hr style="margin: 10px 0 0 0;">
+        <div class="btn-group btn-group-justified" role="group" style="padding-bottom: 5px;">
+            <div class="btn-group" role="group">
+                
+    <a class="btn btn-link" title="赞" style="cursor: pointer;" data-toggle="modal" data-target="#login-modal">
+        <span class="glyphicon glyphicon-heart-empty form_vote_3069176_heart" style="top: 2px;"></span>
+        &nbsp;
+        <span class="form_vote_3069176_votecnt">
+            
+                赞
+            
+        </span>
+    </a>
+
+            </div>
+            <div class="btn-group" role="group">
+                <a id="comment_field_btn_3069176" class="btn btn-link" title="评论">
+    <span class="file_commentcnt glyphicon glyphicon-comment" style="top: 2px;"></span> &nbsp;
+    <span id="file_commentcnt_3069176">
+        
+            评论
+        
+    </span>
+</a>
+            </div>
+            <div class="btn-group" role="group">
+                
+    <a class="btn btn-link" title="收藏" style="cursor: pointer;" data-toggle="modal" data-target="#login-modal">
+        <span class="glyphicon glyphicon-star-empty form_collect_3069176_star" style="top: 2px;"></span>
+        &nbsp;
+        <span class="form_collect_3069176_collectcnt">
+            
+                收藏
+            
+        </span>
+    </a>
+
+            </div>
+        </div>
+        <hr style="margin: 0 0 10px 0;">
+        <div id="comment_field_3069176" style="background-color: #f8f8f8; margin: -10px; padding: 10px; display: none;">
+            
+
+
+<h3 style="font-weight: normal; margin: 10px 0 30px 0;">0 评论</h3>
+<div class="row">
+    <div class="col-md-1 col-sm-2 col-xs-3">
+        
+    </div>
+    
+        <div class="col-xs-12">
+            <form class="comment_reply_form" role="form" enctype="multipart/form-data">
+                <input type="hidden" name="csrfmiddlewaretoken" value="jFJtIzYe2uFVLw3wPbweW9Vs6pPXlAeaTEHvizGaA0T8EnZrvB02HVhVoVarzFyV">
+                <div data-toggle="modal" data-target="#login-modal">
+                    <textarea class="file-comment" name="content" cols="40" rows="2" maxlength="10000" required="" title="回复" placeholder="在这里写评论...（支持MarkDown和Latex语法）"></textarea>
+                </div>
+            </form>
+            <div class="col-md-offset-10 col-md-2 col-sm-offset-9 col-sm-3 col-xs-offset-7 col-xs-5">
+                <button class="form-control btn btn-link" style="border-radius: 5px" data-toggle="modal" data-target="#login-modal">
+                    提交评论
+                </button>
+            </div>
+        </div>
+    
+</div>
+<div id="comment_list_field_3069176">
+    
+</div>
+        </div>
+        <script>
+            $(document).ready(function () {
+                $('#comment_field_btn_3069176').click(function () {
+                    let $comment_field = $("#comment_field_3069176");
+                    $comment_field.slideToggle(500, function () {
+                        if ($comment_field.length > 0) {
+                            $('#comment_reply_form_top_3069176 > textarea').focus();
+                        }
+                    });
+                });
+            });
+        </script>
+    </div>
+</div>
+                    
+                        
+
+<div id="file-content-abstract-field-3050939" class="panel panel-default about-index-file-panel">
+    <div class="panel-body about-index-file-panel-body">
+        <div class="about-index-file-type">
+            活动打卡代码
+            <a href="javascript:;" target="_blank"><span class="file-field-title pull-right">AcWing 3992. 树上有猴</span></a>
+        </div>
+        <hr style="margin: 0 0 10px 0;">
+        <div class="row" style="margin: 0">
+            <div class="col-xs-2 col-sm-1">
+                <a href="" target="_blank">
+                    <img class="img-circle" src="static/picture/94254_md_82f20f64af.jpg" alt="Move.的头像" width="45px">
+                </a>
+            </div>
+            <div class="col-xs-10 col-sm-11">
+                <a href="" target="_blank">
+                    <span class="about-index-file-panel-username">Move.</span>
+                </a>
+                <br>
+                <span title="2021-10-10 23:28">
+                    <span class="about-index-file-panel-time">7天前</span>
+                </span>
+            </div>
+        </div>
+        <div style="padding-left: 45px;">
+            
+                
+
+<div id="file-content-field-3050939" class="file-content-field">
+    <div class="main-martor main-martor-content" data-field-name="content">
+        <div class="section-martor">
+            <div id="file-martor-field-3050939" class="ui bottom attached tab active martor-preview" data-tab="preview-tab-content">
+                <pre><code>#include &lt;bits/stdc++.h&gt;
+using namespace std;
+int n,w;
+int main()
+{
+    cin &gt;&gt; n &gt;&gt; w;
+    int l = 0 , r = w , s = 0;
+    while(n--)
+    {
+        int a;
+        cin &gt;&gt; a;
+        s += a;
+        l = max(l,-s);
+        r = min(r,w - s);
+    }
+    cout &lt;&lt; max(r - l + 1,0) &lt;&lt; endl;
+    return 0;
+}
+</code></pre>
+            </div>
+        </div><!-- end  /.section-martor -->
+    </div>
+</div>
+<a id="file-content-filed-more-btn-3050939" style="display: none; margin-left: -30px; cursor: pointer;">展开</a>
+<script>
+    $(document).ready(function () {
+
+        $('#file-martor-field-3050939 > pre').each(function(i, block){
+            hljs.highlightBlock(block);
+        });
+
+        let math_elemtnt = document.getElementById("file-martor-field-3050939");
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub, math_elemtnt]);
+
+        let $block = $("#file-content-field-3050939");
+        let $btn =  $('#file-content-filed-more-btn-3050939');
+
+        $block.find("img").on('click', function() {
+          $('#overlay')
+            .css({backgroundImage: `url(${this.src})`})
+            .addClass('open')
+            .one('click', function() { $(this).removeClass('open'); });
+        });
+
+        $block.find("img").css("cursor", "pointer");
+
+        let $max_height = 300;
+        
+
+        if ($block.height() >= $max_height){
+           $btn.show();
+        }
+        $btn.click(function () {
+            if ($(this).text() === "展开") {
+                $block.animate({"max-height" : $block.prop("scrollHeight")});
+                $(this).text("收起");
+            } else {
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $("#file-content-abstract-field-3050939").offset().top - 55 - $(window).height() * 0.1
+                });
+                $block.animate({"max-height" : $max_height + "px"});
+                $(this).text("展开");
+            }
+        });
+    });
+</script>
+            
+        </div>
+        <hr style="margin: 10px 0 0 0;">
+        <div class="btn-group btn-group-justified" role="group" style="padding-bottom: 5px;">
+            <div class="btn-group" role="group">
+                
+    <a class="btn btn-link" title="赞" style="cursor: pointer;" data-toggle="modal" data-target="#login-modal">
+        <span class="glyphicon glyphicon-heart-empty form_vote_3050939_heart" style="top: 2px;"></span>
+        &nbsp;
+        <span class="form_vote_3050939_votecnt">
+            
+                赞
+            
+        </span>
+    </a>
+
+            </div>
+            <div class="btn-group" role="group">
+                <a id="comment_field_btn_3050939" class="btn btn-link" title="评论">
+    <span class="file_commentcnt glyphicon glyphicon-comment" style="top: 2px;"></span> &nbsp;
+    <span id="file_commentcnt_3050939">
+        
+            评论
+        
+    </span>
+</a>
+            </div>
+            <div class="btn-group" role="group">
+                
+    <a class="btn btn-link" title="收藏" style="cursor: pointer;" data-toggle="modal" data-target="#login-modal">
+        <span class="glyphicon glyphicon-star-empty form_collect_3050939_star" style="top: 2px;"></span>
+        &nbsp;
+        <span class="form_collect_3050939_collectcnt">
+            
+                收藏
+            
+        </span>
+    </a>
+
+            </div>
+        </div>
+        <hr style="margin: 0 0 10px 0;">
+        <div id="comment_field_3050939" style="background-color: #f8f8f8; margin: -10px; padding: 10px; display: none;">
+            
+
+
+<h3 style="font-weight: normal; margin: 10px 0 30px 0;">0 评论</h3>
+<div class="row">
+    <div class="col-md-1 col-sm-2 col-xs-3">
+        
+    </div>
+    
+        <div class="col-xs-12">
+            <form class="comment_reply_form" role="form" enctype="multipart/form-data">
+                <input type="hidden" name="csrfmiddlewaretoken" value="jFJtIzYe2uFVLw3wPbweW9Vs6pPXlAeaTEHvizGaA0T8EnZrvB02HVhVoVarzFyV">
+                <div data-toggle="modal" data-target="#login-modal">
+                    <textarea class="file-comment" name="content" cols="40" rows="2" maxlength="10000" required="" title="回复" placeholder="在这里写评论...（支持MarkDown和Latex语法）"></textarea>
+                </div>
+            </form>
+            <div class="col-md-offset-10 col-md-2 col-sm-offset-9 col-sm-3 col-xs-offset-7 col-xs-5">
+                <button class="form-control btn btn-link" style="border-radius: 5px" data-toggle="modal" data-target="#login-modal">
+                    提交评论
+                </button>
+            </div>
+        </div>
+    
+</div>
+<div id="comment_list_field_3050939">
+    
+</div>
+        </div>
+        <script>
+            $(document).ready(function () {
+                $('#comment_field_btn_3050939').click(function () {
+                    let $comment_field = $("#comment_field_3050939");
+                    $comment_field.slideToggle(500, function () {
+                        if ($comment_field.length > 0) {
+                            $('#comment_reply_form_top_3050939 > textarea').focus();
+                        }
+                    });
+                });
+            });
+        </script>
+    </div>
+</div>
+                    
+                        
+
+<div id="file-content-abstract-field-3050809" class="panel panel-default about-index-file-panel">
+    <div class="panel-body about-index-file-panel-body">
+        <div class="about-index-file-type">
+            活动打卡代码
+            <a href="javascript:;" target="_blank"><span class="file-field-title pull-right">AcWing 3991. 满足条件的01串</span></a>
+        </div>
+        <hr style="margin: 0 0 10px 0;">
+        <div class="row" style="margin: 0">
+            <div class="col-xs-2 col-sm-1">
+                <a href="" target="_blank">
+                    <img class="img-circle" src="static/picture/94254_md_82f20f64af.jpg" alt="Move.的头像" width="45px">
+                </a>
+            </div>
+            <div class="col-xs-10 col-sm-11">
+                <a href="" target="_blank">
+                    <span class="about-index-file-panel-username">Move.</span>
+                </a>
+                <br>
+                <span title="2021-10-10 22:42">
+                    <span class="about-index-file-panel-time">7天前</span>
+                </span>
+            </div>
+        </div>
+        <div style="padding-left: 45px;">
+            
+                
+
+<div id="file-content-field-3050809" class="file-content-field">
+    <div class="main-martor main-martor-content" data-field-name="content">
+        <div class="section-martor">
+            <div id="file-martor-field-3050809" class="ui bottom attached tab active martor-preview" data-tab="preview-tab-content">
+                <pre><code>#include &lt;bits/stdc++.h&gt;
+using namespace std;
+int t,n;
+int main()
+{
+    cin &gt;&gt; t;
+    while(t--)
+    {
+        cin &gt;&gt; n;
+        string x;
+        cin &gt;&gt; x;
+        bool flag = false;
+        for(int i=0;i&lt;x.size();i++)
+        {
+            if(x[i] == '1')
+                if(x[i + 1] == '1')
+                {
+                    flag = true;
+                    break;
+                }
+            if(x[i] == '0')
+            {
+                if(i == 0)
+                {
+                    if(x[i + 1] != '1')
+                    {
+                        flag = true;
+                        break;
+                    }
+                }
+                else 
+                {
+                    if(x[i + 1] != '1' &amp;&amp; x[i - 1] != '1')
+                    {
+                        flag= true;
+                        break;
+                    }
+                }
+            }
+        }
+        if(flag) puts(&quot;No&quot;);
+        else puts(&quot;Yes&quot;);
+    }
+    return 0;
+}
+</code></pre>
+            </div>
+        </div><!-- end  /.section-martor -->
+    </div>
+</div>
+<a id="file-content-filed-more-btn-3050809" style="display: none; margin-left: -30px; cursor: pointer;">展开</a>
+<script>
+    $(document).ready(function () {
+
+        $('#file-martor-field-3050809 > pre').each(function(i, block){
+            hljs.highlightBlock(block);
+        });
+
+        let math_elemtnt = document.getElementById("file-martor-field-3050809");
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub, math_elemtnt]);
+
+        let $block = $("#file-content-field-3050809");
+        let $btn =  $('#file-content-filed-more-btn-3050809');
+
+        $block.find("img").on('click', function() {
+          $('#overlay')
+            .css({backgroundImage: `url(${this.src})`})
+            .addClass('open')
+            .one('click', function() { $(this).removeClass('open'); });
+        });
+
+        $block.find("img").css("cursor", "pointer");
+
+        let $max_height = 300;
+        
+
+        if ($block.height() >= $max_height){
+           $btn.show();
+        }
+        $btn.click(function () {
+            if ($(this).text() === "展开") {
+                $block.animate({"max-height" : $block.prop("scrollHeight")});
+                $(this).text("收起");
+            } else {
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $("#file-content-abstract-field-3050809").offset().top - 55 - $(window).height() * 0.1
+                });
+                $block.animate({"max-height" : $max_height + "px"});
+                $(this).text("展开");
+            }
+        });
+    });
+</script>
+            
+        </div>
+        <hr style="margin: 10px 0 0 0;">
+        <div class="btn-group btn-group-justified" role="group" style="padding-bottom: 5px;">
+            <div class="btn-group" role="group">
+                
+    <a class="btn btn-link" title="赞" style="cursor: pointer;" data-toggle="modal" data-target="#login-modal">
+        <span class="glyphicon glyphicon-heart-empty form_vote_3050809_heart" style="top: 2px;"></span>
+        &nbsp;
+        <span class="form_vote_3050809_votecnt">
+            
+                赞
+            
+        </span>
+    </a>
+
+            </div>
+            <div class="btn-group" role="group">
+                <a id="comment_field_btn_3050809" class="btn btn-link" title="评论">
+    <span class="file_commentcnt glyphicon glyphicon-comment" style="top: 2px;"></span> &nbsp;
+    <span id="file_commentcnt_3050809">
+        
+            评论
+        
+    </span>
+</a>
+            </div>
+            <div class="btn-group" role="group">
+                
+    <a class="btn btn-link" title="收藏" style="cursor: pointer;" data-toggle="modal" data-target="#login-modal">
+        <span class="glyphicon glyphicon-star-empty form_collect_3050809_star" style="top: 2px;"></span>
+        &nbsp;
+        <span class="form_collect_3050809_collectcnt">
+            
+                收藏
+            
+        </span>
+    </a>
+
+            </div>
+        </div>
+        <hr style="margin: 0 0 10px 0;">
+        <div id="comment_field_3050809" style="background-color: #f8f8f8; margin: -10px; padding: 10px; display: none;">
+            
+
+
+<h3 style="font-weight: normal; margin: 10px 0 30px 0;">0 评论</h3>
+<div class="row">
+    <div class="col-md-1 col-sm-2 col-xs-3">
+        
+    </div>
+    
+        <div class="col-xs-12">
+            <form class="comment_reply_form" role="form" enctype="multipart/form-data">
+                <input type="hidden" name="csrfmiddlewaretoken" value="jFJtIzYe2uFVLw3wPbweW9Vs6pPXlAeaTEHvizGaA0T8EnZrvB02HVhVoVarzFyV">
+                <div data-toggle="modal" data-target="#login-modal">
+                    <textarea class="file-comment" name="content" cols="40" rows="2" maxlength="10000" required="" title="回复" placeholder="在这里写评论...（支持MarkDown和Latex语法）"></textarea>
+                </div>
+            </form>
+            <div class="col-md-offset-10 col-md-2 col-sm-offset-9 col-sm-3 col-xs-offset-7 col-xs-5">
+                <button class="form-control btn btn-link" style="border-radius: 5px" data-toggle="modal" data-target="#login-modal">
+                    提交评论
+                </button>
+            </div>
+        </div>
+    
+</div>
+<div id="comment_list_field_3050809">
+    
+</div>
+        </div>
+        <script>
+            $(document).ready(function () {
+                $('#comment_field_btn_3050809').click(function () {
+                    let $comment_field = $("#comment_field_3050809");
+                    $comment_field.slideToggle(500, function () {
+                        if ($comment_field.length > 0) {
+                            $('#comment_reply_form_top_3050809 > textarea').focus();
+                        }
+                    });
+                });
+            });
+        </script>
+    </div>
+</div>
+                    
+                        
+
+<div id="file-content-abstract-field-3045853" class="panel panel-default about-index-file-panel">
+    <div class="panel-body about-index-file-panel-body">
+        <div class="about-index-file-type">
+            活动打卡代码
+            <a href="javascript:;" target="_blank"><span class="file-field-title pull-right">AcWing 3995. 最小的和</span></a>
+        </div>
+        <hr style="margin: 0 0 10px 0;">
+        <div class="row" style="margin: 0">
+            <div class="col-xs-2 col-sm-1">
+                <a href="" target="_blank">
+                    <img class="img-circle" src="static/picture/94254_md_82f20f64af.jpg" alt="Move.的头像" width="45px">
+                </a>
+            </div>
+            <div class="col-xs-10 col-sm-11">
+                <a href="" target="_blank">
+                    <span class="about-index-file-panel-username">Move.</span>
+                </a>
+                <br>
+                <span title="2021-10-09 21:54">
+                    <span class="about-index-file-panel-time">8天前</span>
+                </span>
+            </div>
+        </div>
+        <div style="padding-left: 45px;">
+            
+                
+
+<div id="file-content-field-3045853" class="file-content-field">
+    <div class="main-martor main-martor-content" data-field-name="content">
+        <div class="section-martor">
+            <div id="file-martor-field-3045853" class="ui bottom attached tab active martor-preview" data-tab="preview-tab-content">
+                <pre><code>#include &lt;bits/stdc++.h&gt;
+using namespace std;
+const int N = 1010;
+int a[N],b[N];
+int n;
+long long ans = 0;
+long long cal()
+{
+    for(int i=1;i&lt;=n;i++)
+        ans += pow(a[i] - b[i],2);
+    return ans;
+}
+int find_max()
+{
+    int max_id = 1;
+    int maxx = 0;
+    for(int i=1;i&lt;=n;i++)
+    {
+        int s = abs(a[i] - b[i]);
+        if(s &gt; maxx)
+        {
+            maxx = s;
+            max_id = i;
+        }
+    }
+    return max_id;
+}
+int main()
+{
+    int k1,k2;
+    cin &gt;&gt; n &gt;&gt; k1 &gt;&gt; k2;
+    for(int i=1;i&lt;=n;i++)
+        cin &gt;&gt; a[i];
+    for(int i=1;i&lt;=n;i++)
+        cin &gt;&gt; b[i];    
+
+    while(k1--)
+    {
+        int id = find_max();
+        if(a[id] == b[id]) break;
+        if(a[id] &gt; b[id]) a[id]--;
+        else a[id]++;
+    }
+
+    k1++;
+    if(k1 % 2 != 0) a[1]++; 
+
+    while(k2--)
+    {
+        int id = find_max();
+        if(a[id] == b[id]) break;
+        if(a[id] &gt; b[id]) b[id]++;
+        else b[id]--;
+    }
+    k2++;
+    if(k2 % 2 != 0) b[1]++;
+    cout &lt;&lt; cal() &lt;&lt; endl;
+    return 0;
+}
+</code></pre>
+            </div>
+        </div><!-- end  /.section-martor -->
+    </div>
+</div>
+<a id="file-content-filed-more-btn-3045853" style="display: none; margin-left: -30px; cursor: pointer;">展开</a>
+<script>
+    $(document).ready(function () {
+
+        $('#file-martor-field-3045853 > pre').each(function(i, block){
+            hljs.highlightBlock(block);
+        });
+
+        let math_elemtnt = document.getElementById("file-martor-field-3045853");
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub, math_elemtnt]);
+
+        let $block = $("#file-content-field-3045853");
+        let $btn =  $('#file-content-filed-more-btn-3045853');
+
+        $block.find("img").on('click', function() {
+          $('#overlay')
+            .css({backgroundImage: `url(${this.src})`})
+            .addClass('open')
+            .one('click', function() { $(this).removeClass('open'); });
+        });
+
+        $block.find("img").css("cursor", "pointer");
+
+        let $max_height = 300;
+        
+
+        if ($block.height() >= $max_height){
+           $btn.show();
+        }
+        $btn.click(function () {
+            if ($(this).text() === "展开") {
+                $block.animate({"max-height" : $block.prop("scrollHeight")});
+                $(this).text("收起");
+            } else {
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $("#file-content-abstract-field-3045853").offset().top - 55 - $(window).height() * 0.1
+                });
+                $block.animate({"max-height" : $max_height + "px"});
+                $(this).text("展开");
+            }
+        });
+    });
+</script>
+            
+        </div>
+        <hr style="margin: 10px 0 0 0;">
+        <div class="btn-group btn-group-justified" role="group" style="padding-bottom: 5px;">
+            <div class="btn-group" role="group">
+                
+    <a class="btn btn-link" title="赞" style="cursor: pointer;" data-toggle="modal" data-target="#login-modal">
+        <span class="glyphicon glyphicon-heart-empty form_vote_3045853_heart" style="top: 2px;"></span>
+        &nbsp;
+        <span class="form_vote_3045853_votecnt">
+            
+                赞
+            
+        </span>
+    </a>
+
+            </div>
+            <div class="btn-group" role="group">
+                <a id="comment_field_btn_3045853" class="btn btn-link" title="评论">
+    <span class="file_commentcnt glyphicon glyphicon-comment" style="top: 2px;"></span> &nbsp;
+    <span id="file_commentcnt_3045853">
+        
+            评论
+        
+    </span>
+</a>
+            </div>
+            <div class="btn-group" role="group">
+                
+    <a class="btn btn-link" title="收藏" style="cursor: pointer;" data-toggle="modal" data-target="#login-modal">
+        <span class="glyphicon glyphicon-star-empty form_collect_3045853_star" style="top: 2px;"></span>
+        &nbsp;
+        <span class="form_collect_3045853_collectcnt">
+            
+                收藏
+            
+        </span>
+    </a>
+
+            </div>
+        </div>
+        <hr style="margin: 0 0 10px 0;">
+        <div id="comment_field_3045853" style="background-color: #f8f8f8; margin: -10px; padding: 10px; display: none;">
+            
+
+
+<h3 style="font-weight: normal; margin: 10px 0 30px 0;">0 评论</h3>
+<div class="row">
+    <div class="col-md-1 col-sm-2 col-xs-3">
+        
+    </div>
+    
+        <div class="col-xs-12">
+            <form class="comment_reply_form" role="form" enctype="multipart/form-data">
+                <input type="hidden" name="csrfmiddlewaretoken" value="jFJtIzYe2uFVLw3wPbweW9Vs6pPXlAeaTEHvizGaA0T8EnZrvB02HVhVoVarzFyV">
+                <div data-toggle="modal" data-target="#login-modal">
+                    <textarea class="file-comment" name="content" cols="40" rows="2" maxlength="10000" required="" title="回复" placeholder="在这里写评论...（支持MarkDown和Latex语法）"></textarea>
+                </div>
+            </form>
+            <div class="col-md-offset-10 col-md-2 col-sm-offset-9 col-sm-3 col-xs-offset-7 col-xs-5">
+                <button class="form-control btn btn-link" style="border-radius: 5px" data-toggle="modal" data-target="#login-modal">
+                    提交评论
+                </button>
+            </div>
+        </div>
+    
+</div>
+<div id="comment_list_field_3045853">
+    
+</div>
+        </div>
+        <script>
+            $(document).ready(function () {
+                $('#comment_field_btn_3045853').click(function () {
+                    let $comment_field = $("#comment_field_3045853");
+                    $comment_field.slideToggle(500, function () {
+                        if ($comment_field.length > 0) {
+                            $('#comment_reply_form_top_3045853 > textarea').focus();
+                        }
+                    });
+                });
+            });
+        </script>
+    </div>
+</div>
+                    
+                        
+
+<div id="file-content-abstract-field-3045672" class="panel panel-default about-index-file-panel">
+    <div class="panel-body about-index-file-panel-body">
+        <div class="about-index-file-type">
+            活动打卡代码
+            <a href="javascript:;" target="_blank"><span class="file-field-title pull-right">AcWing 3994. 水果派</span></a>
+        </div>
+        <hr style="margin: 0 0 10px 0;">
+        <div class="row" style="margin: 0">
+            <div class="col-xs-2 col-sm-1">
+                <a href="" target="_blank">
+                    <img class="img-circle" src="static/picture/94254_md_82f20f64af.jpg" alt="Move.的头像" width="45px">
+                </a>
+            </div>
+            <div class="col-xs-10 col-sm-11">
+                <a href="" target="_blank">
+                    <span class="about-index-file-panel-username">Move.</span>
+                </a>
+                <br>
+                <span title="2021-10-09 21:23">
+                    <span class="about-index-file-panel-time">8天前</span>
+                </span>
+            </div>
+        </div>
+        <div style="padding-left: 45px;">
+            
+                
+
+<div id="file-content-field-3045672" class="file-content-field">
+    <div class="main-martor main-martor-content" data-field-name="content">
+        <div class="section-martor">
+            <div id="file-martor-field-3045672" class="ui bottom attached tab active martor-preview" data-tab="preview-tab-content">
+                <pre><code>#include &lt;bits/stdc++.h&gt;
+using namespace std;
+int t;
+int main()
+{
+    cin &gt;&gt; t;
+    while(t--)
+    {
+        int a,b,c,d,k;
+        cin &gt;&gt; a &gt;&gt; b &gt;&gt; c &gt;&gt; d &gt;&gt; k;
+        bool flag = false;
+        for(int i=1;i&lt;=k;i++)
+        {
+            int apple = i , banana = k - i;
+            if(apple * c &gt;= a &amp;&amp; banana * d &gt;= b)
+            {
+                cout &lt;&lt; apple &lt;&lt; ' ' &lt;&lt; banana &lt;&lt; endl;
+                break;
+            }
+            if(i == k) puts(&quot;-1&quot;);
+        }
+    }
+    return 0;
+}
+</code></pre>
+            </div>
+        </div><!-- end  /.section-martor -->
+    </div>
+</div>
+<a id="file-content-filed-more-btn-3045672" style="display: none; margin-left: -30px; cursor: pointer;">展开</a>
+<script>
+    $(document).ready(function () {
+
+        $('#file-martor-field-3045672 > pre').each(function(i, block){
+            hljs.highlightBlock(block);
+        });
+
+        let math_elemtnt = document.getElementById("file-martor-field-3045672");
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub, math_elemtnt]);
+
+        let $block = $("#file-content-field-3045672");
+        let $btn =  $('#file-content-filed-more-btn-3045672');
+
+        $block.find("img").on('click', function() {
+          $('#overlay')
+            .css({backgroundImage: `url(${this.src})`})
+            .addClass('open')
+            .one('click', function() { $(this).removeClass('open'); });
+        });
+
+        $block.find("img").css("cursor", "pointer");
+
+        let $max_height = 300;
+        
+
+        if ($block.height() >= $max_height){
+           $btn.show();
+        }
+        $btn.click(function () {
+            if ($(this).text() === "展开") {
+                $block.animate({"max-height" : $block.prop("scrollHeight")});
+                $(this).text("收起");
+            } else {
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $("#file-content-abstract-field-3045672").offset().top - 55 - $(window).height() * 0.1
+                });
+                $block.animate({"max-height" : $max_height + "px"});
+                $(this).text("展开");
+            }
+        });
+    });
+</script>
+            
+        </div>
+        <hr style="margin: 10px 0 0 0;">
+        <div class="btn-group btn-group-justified" role="group" style="padding-bottom: 5px;">
+            <div class="btn-group" role="group">
+                
+    <a class="btn btn-link" title="赞" style="cursor: pointer;" data-toggle="modal" data-target="#login-modal">
+        <span class="glyphicon glyphicon-heart-empty form_vote_3045672_heart" style="top: 2px;"></span>
+        &nbsp;
+        <span class="form_vote_3045672_votecnt">
+            
+                赞
+            
+        </span>
+    </a>
+
+            </div>
+            <div class="btn-group" role="group">
+                <a id="comment_field_btn_3045672" class="btn btn-link" title="评论">
+    <span class="file_commentcnt glyphicon glyphicon-comment" style="top: 2px;"></span> &nbsp;
+    <span id="file_commentcnt_3045672">
+        
+            评论
+        
+    </span>
+</a>
+            </div>
+            <div class="btn-group" role="group">
+                
+    <a class="btn btn-link" title="收藏" style="cursor: pointer;" data-toggle="modal" data-target="#login-modal">
+        <span class="glyphicon glyphicon-star-empty form_collect_3045672_star" style="top: 2px;"></span>
+        &nbsp;
+        <span class="form_collect_3045672_collectcnt">
+            
+                收藏
+            
+        </span>
+    </a>
+
+            </div>
+        </div>
+        <hr style="margin: 0 0 10px 0;">
+        <div id="comment_field_3045672" style="background-color: #f8f8f8; margin: -10px; padding: 10px; display: none;">
+            
+
+
+<h3 style="font-weight: normal; margin: 10px 0 30px 0;">0 评论</h3>
+<div class="row">
+    <div class="col-md-1 col-sm-2 col-xs-3">
+        
+    </div>
+    
+        <div class="col-xs-12">
+            <form class="comment_reply_form" role="form" enctype="multipart/form-data">
+                <input type="hidden" name="csrfmiddlewaretoken" value="jFJtIzYe2uFVLw3wPbweW9Vs6pPXlAeaTEHvizGaA0T8EnZrvB02HVhVoVarzFyV">
+                <div data-toggle="modal" data-target="#login-modal">
+                    <textarea class="file-comment" name="content" cols="40" rows="2" maxlength="10000" required="" title="回复" placeholder="在这里写评论...（支持MarkDown和Latex语法）"></textarea>
+                </div>
+            </form>
+            <div class="col-md-offset-10 col-md-2 col-sm-offset-9 col-sm-3 col-xs-offset-7 col-xs-5">
+                <button class="form-control btn btn-link" style="border-radius: 5px" data-toggle="modal" data-target="#login-modal">
+                    提交评论
+                </button>
+            </div>
+        </div>
+    
+</div>
+<div id="comment_list_field_3045672">
+    
+</div>
+        </div>
+        <script>
+            $(document).ready(function () {
+                $('#comment_field_btn_3045672').click(function () {
+                    let $comment_field = $("#comment_field_3045672");
+                    $comment_field.slideToggle(500, function () {
+                        if ($comment_field.length > 0) {
+                            $('#comment_reply_form_top_3045672 > textarea').focus();
+                        }
+                    });
+                });
+            });
+        </script>
+    </div>
+</div>
+                    
+                        
+
+<div id="file-content-abstract-field-3038886" class="panel panel-default about-index-file-panel">
+    <div class="panel-body about-index-file-panel-body">
+        <div class="about-index-file-type">
+            活动打卡代码
+            <a href="javascript:;" target="_blank"><span class="file-field-title pull-right">AcWing 1247. 后缀表达式</span></a>
+        </div>
+        <hr style="margin: 0 0 10px 0;">
+        <div class="row" style="margin: 0">
+            <div class="col-xs-2 col-sm-1">
+                <a href="" target="_blank">
+                    <img class="img-circle" src="static/picture/94254_md_82f20f64af.jpg" alt="Move.的头像" width="45px">
+                </a>
+            </div>
+            <div class="col-xs-10 col-sm-11">
+                <a href="" target="_blank">
+                    <span class="about-index-file-panel-username">Move.</span>
+                </a>
+                <br>
+                <span title="2021-10-08 23:12">
+                    <span class="about-index-file-panel-time">9天前</span>
+                </span>
+            </div>
+        </div>
+        <div style="padding-left: 45px;">
+            
+                
+
+<div id="file-content-field-3038886" class="file-content-field">
+    <div class="main-martor main-martor-content" data-field-name="content">
+        <div class="section-martor">
+            <div id="file-martor-field-3038886" class="ui bottom attached tab active martor-preview" data-tab="preview-tab-content">
+                <pre><code>#include &lt;bits/stdc++.h&gt;
+using namespace std;
+const int N = 200010;
+int a[N];
+typedef long long ll;
+int main()
+{
+    int n , m;
+    cin &gt;&gt; n &gt;&gt; m;
+    int len = n + m + 1;
+    for(int i=0;i&lt;len;i++)
+        scanf(&quot;%d&quot;,&amp;a[i]);
+
+
+    ll res = 0;
+    if(!m)
+        for(int i=0;i&lt;len;i++)
+            res += a[i];
+    else 
+    {
+        sort(a,a+len);
+        res = a[len-1] - a[0];            
+        for(int i=1;i&lt;len-1;i++)
+            res += abs(a[i]);
+    }
+    cout &lt;&lt; res &lt;&lt; endl;
+    return 0;
+}
+</code></pre>
+            </div>
+        </div><!-- end  /.section-martor -->
+    </div>
+</div>
+<a id="file-content-filed-more-btn-3038886" style="display: none; margin-left: -30px; cursor: pointer;">展开</a>
+<script>
+    $(document).ready(function () {
+
+        $('#file-martor-field-3038886 > pre').each(function(i, block){
+            hljs.highlightBlock(block);
+        });
+
+        let math_elemtnt = document.getElementById("file-martor-field-3038886");
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub, math_elemtnt]);
+
+        let $block = $("#file-content-field-3038886");
+        let $btn =  $('#file-content-filed-more-btn-3038886');
+
+        $block.find("img").on('click', function() {
+          $('#overlay')
+            .css({backgroundImage: `url(${this.src})`})
+            .addClass('open')
+            .one('click', function() { $(this).removeClass('open'); });
+        });
+
+        $block.find("img").css("cursor", "pointer");
+
+        let $max_height = 300;
+        
+
+        if ($block.height() >= $max_height){
+           $btn.show();
+        }
+        $btn.click(function () {
+            if ($(this).text() === "展开") {
+                $block.animate({"max-height" : $block.prop("scrollHeight")});
+                $(this).text("收起");
+            } else {
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $("#file-content-abstract-field-3038886").offset().top - 55 - $(window).height() * 0.1
+                });
+                $block.animate({"max-height" : $max_height + "px"});
+                $(this).text("展开");
+            }
+        });
+    });
+</script>
+            
+        </div>
+        <hr style="margin: 10px 0 0 0;">
+        <div class="btn-group btn-group-justified" role="group" style="padding-bottom: 5px;">
+            <div class="btn-group" role="group">
+                
+    <a class="btn btn-link" title="赞" style="cursor: pointer;" data-toggle="modal" data-target="#login-modal">
+        <span class="glyphicon glyphicon-heart-empty form_vote_3038886_heart" style="top: 2px;"></span>
+        &nbsp;
+        <span class="form_vote_3038886_votecnt">
+            
+                赞
+            
+        </span>
+    </a>
+
+            </div>
+            <div class="btn-group" role="group">
+                <a id="comment_field_btn_3038886" class="btn btn-link" title="评论">
+    <span class="file_commentcnt glyphicon glyphicon-comment" style="top: 2px;"></span> &nbsp;
+    <span id="file_commentcnt_3038886">
+        
+            评论
+        
+    </span>
+</a>
+            </div>
+            <div class="btn-group" role="group">
+                
+    <a class="btn btn-link" title="收藏" style="cursor: pointer;" data-toggle="modal" data-target="#login-modal">
+        <span class="glyphicon glyphicon-star-empty form_collect_3038886_star" style="top: 2px;"></span>
+        &nbsp;
+        <span class="form_collect_3038886_collectcnt">
+            
+                收藏
+            
+        </span>
+    </a>
+
+            </div>
+        </div>
+        <hr style="margin: 0 0 10px 0;">
+        <div id="comment_field_3038886" style="background-color: #f8f8f8; margin: -10px; padding: 10px; display: none;">
+            
+
+
+<h3 style="font-weight: normal; margin: 10px 0 30px 0;">0 评论</h3>
+<div class="row">
+    <div class="col-md-1 col-sm-2 col-xs-3">
+        
+    </div>
+    
+        <div class="col-xs-12">
+            <form class="comment_reply_form" role="form" enctype="multipart/form-data">
+                <input type="hidden" name="csrfmiddlewaretoken" value="jFJtIzYe2uFVLw3wPbweW9Vs6pPXlAeaTEHvizGaA0T8EnZrvB02HVhVoVarzFyV">
+                <div data-toggle="modal" data-target="#login-modal">
+                    <textarea class="file-comment" name="content" cols="40" rows="2" maxlength="10000" required="" title="回复" placeholder="在这里写评论...（支持MarkDown和Latex语法）"></textarea>
+                </div>
+            </form>
+            <div class="col-md-offset-10 col-md-2 col-sm-offset-9 col-sm-3 col-xs-offset-7 col-xs-5">
+                <button class="form-control btn btn-link" style="border-radius: 5px" data-toggle="modal" data-target="#login-modal">
+                    提交评论
+                </button>
+            </div>
+        </div>
+    
+</div>
+<div id="comment_list_field_3038886">
+    
+</div>
+        </div>
+        <script>
+            $(document).ready(function () {
+                $('#comment_field_btn_3038886').click(function () {
+                    let $comment_field = $("#comment_field_3038886");
+                    $comment_field.slideToggle(500, function () {
+                        if ($comment_field.length > 0) {
+                            $('#comment_reply_form_top_3038886 > textarea').focus();
+                        }
+                    });
+                });
+            });
+        </script>
+    </div>
+</div>
+                    
+                        
+
+<div id="file-content-abstract-field-3036359" class="panel panel-default about-index-file-panel">
+    <div class="panel-body about-index-file-panel-body">
+        <div class="about-index-file-type">
+            活动打卡代码
+            <a href="javascript:;" target="_blank"><span class="file-field-title pull-right">AcWing 1239. 乘积最大</span></a>
+        </div>
+        <hr style="margin: 0 0 10px 0;">
+        <div class="row" style="margin: 0">
+            <div class="col-xs-2 col-sm-1">
+                <a href="" target="_blank">
+                    <img class="img-circle" src="static/picture/94254_md_82f20f64af.jpg" alt="Move.的头像" width="45px">
+                </a>
+            </div>
+            <div class="col-xs-10 col-sm-11">
+                <a href="" target="_blank">
+                    <span class="about-index-file-panel-username">Move.</span>
+                </a>
+                <br>
+                <span title="2021-10-08 15:17">
+                    <span class="about-index-file-panel-time">10天前</span>
+                </span>
+            </div>
+        </div>
+        <div style="padding-left: 45px;">
+            
+                
+
+<div id="file-content-field-3036359" class="file-content-field">
+    <div class="main-martor main-martor-content" data-field-name="content">
+        <div class="section-martor">
+            <div id="file-martor-field-3036359" class="ui bottom attached tab active martor-preview" data-tab="preview-tab-content">
+                <pre><code>#include &lt;bits/stdc++.h&gt;
+using namespace std;
+const int N = 100010 , mod = 1000000009;
+typedef long long ll;
+int n,k;
+int a[N];
+int main()
+{
+    cin &gt;&gt; n &gt;&gt; k;
+    for(int i=0;i&lt;n;i++)
+        scanf(&quot;%d&quot;,&amp;a[i]);
+
+    sort(a,a+n);
+
+    ll res = 1 , l = 0 , r = n - 1;
+    int sign = 1;
+    if(k % 2)
+    {
+        res = a[r--];
+        k--;
+        if(res &lt; 0) sign = -1;
+    }
+
+    while(k)
+    {
+        ll x = (ll) a[l] * a[l+1] , y = (ll) a[r] * a[r-1];
+        if(x * sign &gt; y * sign)
+        {
+            res = x % mod * res % mod;
+            l += 2;
+        }
+        else
+        {
+            res = y % mod * res % mod;
+            r -= 2;
+        }
+        k -= 2;
+    }
+    cout &lt;&lt; res &lt;&lt; endl;
+    return 0;
+}
+</code></pre>
+            </div>
+        </div><!-- end  /.section-martor -->
+    </div>
+</div>
+<a id="file-content-filed-more-btn-3036359" style="display: none; margin-left: -30px; cursor: pointer;">展开</a>
+<script>
+    $(document).ready(function () {
+
+        $('#file-martor-field-3036359 > pre').each(function(i, block){
+            hljs.highlightBlock(block);
+        });
+
+        let math_elemtnt = document.getElementById("file-martor-field-3036359");
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub, math_elemtnt]);
+
+        let $block = $("#file-content-field-3036359");
+        let $btn =  $('#file-content-filed-more-btn-3036359');
+
+        $block.find("img").on('click', function() {
+          $('#overlay')
+            .css({backgroundImage: `url(${this.src})`})
+            .addClass('open')
+            .one('click', function() { $(this).removeClass('open'); });
+        });
+
+        $block.find("img").css("cursor", "pointer");
+
+        let $max_height = 300;
+        
+
+        if ($block.height() >= $max_height){
+           $btn.show();
+        }
+        $btn.click(function () {
+            if ($(this).text() === "展开") {
+                $block.animate({"max-height" : $block.prop("scrollHeight")});
+                $(this).text("收起");
+            } else {
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $("#file-content-abstract-field-3036359").offset().top - 55 - $(window).height() * 0.1
+                });
+                $block.animate({"max-height" : $max_height + "px"});
+                $(this).text("展开");
+            }
+        });
+    });
+</script>
+            
+        </div>
+        <hr style="margin: 10px 0 0 0;">
+        <div class="btn-group btn-group-justified" role="group" style="padding-bottom: 5px;">
+            <div class="btn-group" role="group">
+                
+    <a class="btn btn-link" title="赞" style="cursor: pointer;" data-toggle="modal" data-target="#login-modal">
+        <span class="glyphicon glyphicon-heart-empty form_vote_3036359_heart" style="top: 2px;"></span>
+        &nbsp;
+        <span class="form_vote_3036359_votecnt">
+            
+                赞
+            
+        </span>
+    </a>
+
+            </div>
+            <div class="btn-group" role="group">
+                <a id="comment_field_btn_3036359" class="btn btn-link" title="评论">
+    <span class="file_commentcnt glyphicon glyphicon-comment" style="top: 2px;"></span> &nbsp;
+    <span id="file_commentcnt_3036359">
+        
+            评论
+        
+    </span>
+</a>
+            </div>
+            <div class="btn-group" role="group">
+                
+    <a class="btn btn-link" title="收藏" style="cursor: pointer;" data-toggle="modal" data-target="#login-modal">
+        <span class="glyphicon glyphicon-star-empty form_collect_3036359_star" style="top: 2px;"></span>
+        &nbsp;
+        <span class="form_collect_3036359_collectcnt">
+            
+                收藏
+            
+        </span>
+    </a>
+
+            </div>
+        </div>
+        <hr style="margin: 0 0 10px 0;">
+        <div id="comment_field_3036359" style="background-color: #f8f8f8; margin: -10px; padding: 10px; display: none;">
+            
+
+
+<h3 style="font-weight: normal; margin: 10px 0 30px 0;">0 评论</h3>
+<div class="row">
+    <div class="col-md-1 col-sm-2 col-xs-3">
+        
+    </div>
+    
+        <div class="col-xs-12">
+            <form class="comment_reply_form" role="form" enctype="multipart/form-data">
+                <input type="hidden" name="csrfmiddlewaretoken" value="jFJtIzYe2uFVLw3wPbweW9Vs6pPXlAeaTEHvizGaA0T8EnZrvB02HVhVoVarzFyV">
+                <div data-toggle="modal" data-target="#login-modal">
+                    <textarea class="file-comment" name="content" cols="40" rows="2" maxlength="10000" required="" title="回复" placeholder="在这里写评论...（支持MarkDown和Latex语法）"></textarea>
+                </div>
+            </form>
+            <div class="col-md-offset-10 col-md-2 col-sm-offset-9 col-sm-3 col-xs-offset-7 col-xs-5">
+                <button class="form-control btn btn-link" style="border-radius: 5px" data-toggle="modal" data-target="#login-modal">
+                    提交评论
+                </button>
+            </div>
+        </div>
+    
+</div>
+<div id="comment_list_field_3036359">
+    
+</div>
+        </div>
+        <script>
+            $(document).ready(function () {
+                $('#comment_field_btn_3036359').click(function () {
+                    let $comment_field = $("#comment_field_3036359");
+                    $comment_field.slideToggle(500, function () {
+                        if ($comment_field.length > 0) {
+                            $('#comment_reply_form_top_3036359 > textarea').focus();
+                        }
+                    });
+                });
+            });
+        </script>
+    </div>
+</div>
+                    
+                        
+
+<div id="file-content-abstract-field-3026492" class="panel panel-default about-index-file-panel">
+    <div class="panel-body about-index-file-panel-body">
+        <div class="about-index-file-type">
+            活动打卡代码
+            <a href="javascript:;" target="_blank"><span class="file-field-title pull-right">AcWing 1235. 付账问题</span></a>
+        </div>
+        <hr style="margin: 0 0 10px 0;">
+        <div class="row" style="margin: 0">
+            <div class="col-xs-2 col-sm-1">
+                <a href="" target="_blank">
+                    <img class="img-circle" src="static/picture/94254_md_82f20f64af.jpg" alt="Move.的头像" width="45px">
+                </a>
+            </div>
+            <div class="col-xs-10 col-sm-11">
+                <a href="" target="_blank">
+                    <span class="about-index-file-panel-username">Move.</span>
+                </a>
+                <br>
+                <span title="2021-10-05 23:33">
+                    <span class="about-index-file-panel-time">12天前</span>
+                </span>
+            </div>
+        </div>
+        <div style="padding-left: 45px;">
+            
+                
+
+<div id="file-content-field-3026492" class="file-content-field">
+    <div class="main-martor main-martor-content" data-field-name="content">
+        <div class="section-martor">
+            <div id="file-martor-field-3026492" class="ui bottom attached tab active martor-preview" data-tab="preview-tab-content">
+                <pre><code>#include &lt;bits/stdc++.h&gt;
+using namespace std;
+const int N = 500010;
+int n;
+long double s;
+int a[N];
+int main()
+{
+    cin &gt;&gt; n &gt;&gt; s;
+    for(int i=0;i&lt;n;i++)
+        scanf(&quot;%d&quot;,&amp;a[i]);
+
+    sort(a,a+n);
+    long double res = 0 , avg = s / n;
+    for(int i=0;i&lt;n;i++)
+    {
+        double cur = s / (n - i);
+        if(a[i] &lt; cur) cur = a[i];
+        res += (cur - avg) * (cur - avg);
+        s -= cur;
+    }
+    printf(&quot;%.4Lf&quot;,sqrt(res / n));
+    return 0;
+}
+</code></pre>
+            </div>
+        </div><!-- end  /.section-martor -->
+    </div>
+</div>
+<a id="file-content-filed-more-btn-3026492" style="display: none; margin-left: -30px; cursor: pointer;">展开</a>
+<script>
+    $(document).ready(function () {
+
+        $('#file-martor-field-3026492 > pre').each(function(i, block){
+            hljs.highlightBlock(block);
+        });
+
+        let math_elemtnt = document.getElementById("file-martor-field-3026492");
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub, math_elemtnt]);
+
+        let $block = $("#file-content-field-3026492");
+        let $btn =  $('#file-content-filed-more-btn-3026492');
+
+        $block.find("img").on('click', function() {
+          $('#overlay')
+            .css({backgroundImage: `url(${this.src})`})
+            .addClass('open')
+            .one('click', function() { $(this).removeClass('open'); });
+        });
+
+        $block.find("img").css("cursor", "pointer");
+
+        let $max_height = 300;
+        
+
+        if ($block.height() >= $max_height){
+           $btn.show();
+        }
+        $btn.click(function () {
+            if ($(this).text() === "展开") {
+                $block.animate({"max-height" : $block.prop("scrollHeight")});
+                $(this).text("收起");
+            } else {
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $("#file-content-abstract-field-3026492").offset().top - 55 - $(window).height() * 0.1
+                });
+                $block.animate({"max-height" : $max_height + "px"});
+                $(this).text("展开");
+            }
+        });
+    });
+</script>
+            
+        </div>
+        <hr style="margin: 10px 0 0 0;">
+        <div class="btn-group btn-group-justified" role="group" style="padding-bottom: 5px;">
+            <div class="btn-group" role="group">
+                
+    <a class="btn btn-link" title="赞" style="cursor: pointer;" data-toggle="modal" data-target="#login-modal">
+        <span class="glyphicon glyphicon-heart-empty form_vote_3026492_heart" style="top: 2px;"></span>
+        &nbsp;
+        <span class="form_vote_3026492_votecnt">
+            
+                赞
+            
+        </span>
+    </a>
+
+            </div>
+            <div class="btn-group" role="group">
+                <a id="comment_field_btn_3026492" class="btn btn-link" title="评论">
+    <span class="file_commentcnt glyphicon glyphicon-comment" style="top: 2px;"></span> &nbsp;
+    <span id="file_commentcnt_3026492">
+        
+            评论
+        
+    </span>
+</a>
+            </div>
+            <div class="btn-group" role="group">
+                
+    <a class="btn btn-link" title="收藏" style="cursor: pointer;" data-toggle="modal" data-target="#login-modal">
+        <span class="glyphicon glyphicon-star-empty form_collect_3026492_star" style="top: 2px;"></span>
+        &nbsp;
+        <span class="form_collect_3026492_collectcnt">
+            
+                收藏
+            
+        </span>
+    </a>
+
+            </div>
+        </div>
+        <hr style="margin: 0 0 10px 0;">
+        <div id="comment_field_3026492" style="background-color: #f8f8f8; margin: -10px; padding: 10px; display: none;">
+            
+
+
+<h3 style="font-weight: normal; margin: 10px 0 30px 0;">0 评论</h3>
+<div class="row">
+    <div class="col-md-1 col-sm-2 col-xs-3">
+        
+    </div>
+    
+        <div class="col-xs-12">
+            <form class="comment_reply_form" role="form" enctype="multipart/form-data">
+                <input type="hidden" name="csrfmiddlewaretoken" value="jFJtIzYe2uFVLw3wPbweW9Vs6pPXlAeaTEHvizGaA0T8EnZrvB02HVhVoVarzFyV">
+                <div data-toggle="modal" data-target="#login-modal">
+                    <textarea class="file-comment" name="content" cols="40" rows="2" maxlength="10000" required="" title="回复" placeholder="在这里写评论...（支持MarkDown和Latex语法）"></textarea>
+                </div>
+            </form>
+            <div class="col-md-offset-10 col-md-2 col-sm-offset-9 col-sm-3 col-xs-offset-7 col-xs-5">
+                <button class="form-control btn btn-link" style="border-radius: 5px" data-toggle="modal" data-target="#login-modal">
+                    提交评论
+                </button>
+            </div>
+        </div>
+    
+</div>
+<div id="comment_list_field_3026492">
+    
+</div>
+        </div>
+        <script>
+            $(document).ready(function () {
+                $('#comment_field_btn_3026492').click(function () {
+                    let $comment_field = $("#comment_field_3026492");
+                    $comment_field.slideToggle(500, function () {
+                        if ($comment_field.length > 0) {
+                            $('#comment_reply_form_top_3026492 > textarea').focus();
+                        }
+                    });
+                });
+            });
+        </script>
+    </div>
+</div>
+                    
+                        
+
+<div id="file-content-abstract-field-3026264" class="panel panel-default about-index-file-panel">
+    <div class="panel-body about-index-file-panel-body">
+        <div class="about-index-file-type">
+            活动打卡代码
+            <a href="javascript:;" target="_blank"><span class="file-field-title pull-right">AcWing 112. 雷达设备</span></a>
+        </div>
+        <hr style="margin: 0 0 10px 0;">
+        <div class="row" style="margin: 0">
+            <div class="col-xs-2 col-sm-1">
+                <a href="" target="_blank">
+                    <img class="img-circle" src="static/picture/94254_md_82f20f64af.jpg" alt="Move.的头像" width="45px">
+                </a>
+            </div>
+            <div class="col-xs-10 col-sm-11">
+                <a href="" target="_blank">
+                    <span class="about-index-file-panel-username">Move.</span>
+                </a>
+                <br>
+                <span title="2021-10-05 22:30">
+                    <span class="about-index-file-panel-time">12天前</span>
+                </span>
+            </div>
+        </div>
+        <div style="padding-left: 45px;">
+            
+                
+
+<div id="file-content-field-3026264" class="file-content-field">
+    <div class="main-martor main-martor-content" data-field-name="content">
+        <div class="section-martor">
+            <div id="file-martor-field-3026264" class="ui bottom attached tab active martor-preview" data-tab="preview-tab-content">
+                <h3>把问题转换成区间选点问题</h3>
+<pre><code>#include &lt;bits/stdc++.h&gt;
+using namespace std;
+const int N = 1010;
+int n,d;
+struct Seg{
+    double l , r;
+    bool operator &lt; (const Seg&amp; t) const
+    {
+        return r &lt; t.r;
+    }
+}seg[N];
+int main()
+{
+    cin &gt;&gt; n &gt;&gt; d;
+    bool flag = false;
+    for(int i=0;i&lt;n;i++)
+    {
+        int x , y ;
+        scanf(&quot;%d%d&quot;,&amp;x,&amp;y);
+        if(y &gt; d)
+        {
+             flag = true;
+             break;
+        }
+        auto len = sqrt(d * d - y * y);
+        seg[i] = {x - len , x + len};
+    }
+
+    if(flag)
+    {
+         puts(&quot;-1&quot;);
+         return 0;
+    }
+    sort(seg,seg+n);
+    int cnt = 0;
+    double last = -1e20;    
+    for(int i=0;i&lt;n;i++)
+    {
+        if(last &lt; seg[i].l)
+        {
+            last = seg[i].r;
+            cnt++;
+        }
+    }
+    cout &lt;&lt; cnt &lt;&lt; endl;
+    return 0;
+}
+</code></pre>
+            </div>
+        </div><!-- end  /.section-martor -->
+    </div>
+</div>
+<a id="file-content-filed-more-btn-3026264" style="display: none; margin-left: -30px; cursor: pointer;">展开</a>
+<script>
+    $(document).ready(function () {
+
+        $('#file-martor-field-3026264 > pre').each(function(i, block){
+            hljs.highlightBlock(block);
+        });
+
+        let math_elemtnt = document.getElementById("file-martor-field-3026264");
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub, math_elemtnt]);
+
+        let $block = $("#file-content-field-3026264");
+        let $btn =  $('#file-content-filed-more-btn-3026264');
+
+        $block.find("img").on('click', function() {
+          $('#overlay')
+            .css({backgroundImage: `url(${this.src})`})
+            .addClass('open')
+            .one('click', function() { $(this).removeClass('open'); });
+        });
+
+        $block.find("img").css("cursor", "pointer");
+
+        let $max_height = 300;
+        
+
+        if ($block.height() >= $max_height){
+           $btn.show();
+        }
+        $btn.click(function () {
+            if ($(this).text() === "展开") {
+                $block.animate({"max-height" : $block.prop("scrollHeight")});
+                $(this).text("收起");
+            } else {
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $("#file-content-abstract-field-3026264").offset().top - 55 - $(window).height() * 0.1
+                });
+                $block.animate({"max-height" : $max_height + "px"});
+                $(this).text("展开");
+            }
+        });
+    });
+</script>
+            
+        </div>
+        <hr style="margin: 10px 0 0 0;">
+        <div class="btn-group btn-group-justified" role="group" style="padding-bottom: 5px;">
+            <div class="btn-group" role="group">
+                
+    <a class="btn btn-link" title="赞" style="cursor: pointer;" data-toggle="modal" data-target="#login-modal">
+        <span class="glyphicon glyphicon-heart-empty form_vote_3026264_heart" style="top: 2px;"></span>
+        &nbsp;
+        <span class="form_vote_3026264_votecnt">
+            
+                赞
+            
+        </span>
+    </a>
+
+            </div>
+            <div class="btn-group" role="group">
+                <a id="comment_field_btn_3026264" class="btn btn-link" title="评论">
+    <span class="file_commentcnt glyphicon glyphicon-comment" style="top: 2px;"></span> &nbsp;
+    <span id="file_commentcnt_3026264">
+        
+            评论
+        
+    </span>
+</a>
+            </div>
+            <div class="btn-group" role="group">
+                
+    <a class="btn btn-link" title="收藏" style="cursor: pointer;" data-toggle="modal" data-target="#login-modal">
+        <span class="glyphicon glyphicon-star-empty form_collect_3026264_star" style="top: 2px;"></span>
+        &nbsp;
+        <span class="form_collect_3026264_collectcnt">
+            
+                收藏
+            
+        </span>
+    </a>
+
+            </div>
+        </div>
+        <hr style="margin: 0 0 10px 0;">
+        <div id="comment_field_3026264" style="background-color: #f8f8f8; margin: -10px; padding: 10px; display: none;">
+            
+
+
+<h3 style="font-weight: normal; margin: 10px 0 30px 0;">0 评论</h3>
+<div class="row">
+    <div class="col-md-1 col-sm-2 col-xs-3">
+        
+    </div>
+    
+        <div class="col-xs-12">
+            <form class="comment_reply_form" role="form" enctype="multipart/form-data">
+                <input type="hidden" name="csrfmiddlewaretoken" value="jFJtIzYe2uFVLw3wPbweW9Vs6pPXlAeaTEHvizGaA0T8EnZrvB02HVhVoVarzFyV">
+                <div data-toggle="modal" data-target="#login-modal">
+                    <textarea class="file-comment" name="content" cols="40" rows="2" maxlength="10000" required="" title="回复" placeholder="在这里写评论...（支持MarkDown和Latex语法）"></textarea>
+                </div>
+            </form>
+            <div class="col-md-offset-10 col-md-2 col-sm-offset-9 col-sm-3 col-xs-offset-7 col-xs-5">
+                <button class="form-control btn btn-link" style="border-radius: 5px" data-toggle="modal" data-target="#login-modal">
+                    提交评论
+                </button>
+            </div>
+        </div>
+    
+</div>
+<div id="comment_list_field_3026264">
+    
+</div>
+        </div>
+        <script>
+            $(document).ready(function () {
+                $('#comment_field_btn_3026264').click(function () {
+                    let $comment_field = $("#comment_field_3026264");
+                    $comment_field.slideToggle(500, function () {
+                        if ($comment_field.length > 0) {
+                            $('#comment_reply_form_top_3026264 > textarea').focus();
+                        }
+                    });
+                });
+            });
+        </script>
+    </div>
+</div>
+                    
+                </div>
+            </div>
+        
+        <div id="overlay"></div>
+        
+
+<div id="loading_file_gif" class="panel panel-default about-index-file-panel" style="background-color: #FFFFFF; display: none">
+    <div class="panel-body about-index-file-panel-body">
+        <div id="loading_gif">
+            <img class="img-circle" src="static/picture/img_loading.gif" width="80px" alt="加载中" title="加载中" style="display: block; margin: 0 auto;">
+        </div>
+    </div>
+</div>
+        <div id="modal-danger" class="modal modal-message modal-danger fade" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <i class="glyphicon glyphicon-fire"></i>
+            </div>
+            <div class="modal-body">你确定删除吗？</div>
+            <div class="modal-footer">
+                <form id="modal_danger_delete_url" method="post" action="" enctype="multipart/form-data">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="jFJtIzYe2uFVLw3wPbweW9Vs6pPXlAeaTEHvizGaA0T8EnZrvB02HVhVoVarzFyV">
+                    <button class="btn" type="button" data-dismiss="modal">取消</button>
+                    <button id="modal_danger_delete_url_btn" class="btn btn-danger" data-dismiss="modal" type="submit">
+                        删除
+                    </button>
+                </form>
+            </div>
+        </div> <!-- / .modal-content -->
+    </div> <!-- / .modal-dialog -->
+</div>
+    
+                    </div>
+                </div>
+    </div>
+    </div></div>
+</div>
+    <footer id="acwing_footer" class="footer">
+    <div class="container">
+        <hr>
+        <div class="row">
+            <div class="col-sm-8 copyright">
+                <span>
+                    © 2018-2021 AcWing 版权所有
+                    &nbsp;|&nbsp;
+                    <a href="javascript:;">京ICP备17053197号-1</a>
+                </span>
+            </div>
+            <div class="text-right col-sm-4 region-us">
+                <div class="links">
+                    <a href="javascript:;">联系我们</a>
+                    &nbsp;|&nbsp;
+                    <a href="javascript:;">常见问题</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+
+
+    
+
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    	<div class="modal-dialog" style="width: 85%; max-width: 350px;">
+			<div class="modal-content">
+				<div class="modal-header" align="center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+					</button>
+                    <span class="acwing-brand">AcWing</span>
+				</div>
+
+                <!-- Begin # DIV Form -->
+                <div id="div-forms">
+
+                    <!-- Begin # Login Form -->
+                    <form class="sign-form" id="login-form" role="form" action="/user/account/signin/" method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="csrfmiddlewaretoken" value="jFJtIzYe2uFVLw3wPbweW9Vs6pPXlAeaTEHvizGaA0T8EnZrvB02HVhVoVarzFyV">
+		                <div class="modal-body">
+				    		<div id="div-login-msg">
+                                <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="text-login-msg">请输入登录信息</span>
+                            </div>
+				    		<input id="login_username" name="username" class="form-control" type="text" placeholder="用户名或邮箱" maxlength="30" required="">
+				    		<input id="login_password" name="password" class="form-control" type="password" placeholder="密码" maxlength="16" required="">
+                            <div class="checkbox">
+                                <label>
+                                    <input id="login_remember_me" name="remember_me" type="checkbox" checked="checked"> 记住我
+                                </label>
+                            </div>
+        		    	</div>
+				        <div class="modal-footer">
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">登录</button>
+                            </div>
+                            <div>
+                                <div style="width:50%;padding:0;margin:0;float:left;box-sizing:border-box;" align="left">
+                                    <button id="login_lost_btn" type="button" class="btn btn-link">忘记密码</button>
+                                </div>
+                                <div style="width:50%;padding:0;margin:0;float:left;box-sizing:border-box;" align="right">
+                                    <button id="login_register_btn" type="button" class="btn btn-link">注册</button>
+                                </div>
+                            </div>
+                            <div>
+                                更多登录方式：
+                                <a id="third_party_weixin_connect_link_base" href="#">
+                                    <img class="img" src="static/picture/icon48_wx_logo.png" width="30px" alt="微信图标">
+                                </a>
+                                <a href="javascript:;">
+                                    <img class="img" src="static/picture/qq.jpg" width="26px" alt="qq图标">
+                                </a>
+                            </div>
+				        </div>
+                    </form>
+                    <!-- End # Login Form -->
+
+                    <!-- Begin | Lost Password Form -->
+                    <form class="sign-form" id="lost-form" role="form" action="/user/account/password_forget/" method="post" enctype="multipart/form-data" style="display:none;">
+                        <input type="hidden" name="csrfmiddlewaretoken" value="jFJtIzYe2uFVLw3wPbweW9Vs6pPXlAeaTEHvizGaA0T8EnZrvB02HVhVoVarzFyV">
+    	    		    <div class="modal-body">
+		    				<div id="div-lost-msg">
+                                <div id="icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="text-lost-msg">请输入绑定的邮箱地址</span>
+                            </div>
+		    				<input id="lost_email" name="email" class="form-control" type="email" placeholder="邮箱地址" maxlength="254" required="">
+            			</div>
+		    		    <div class="modal-footer">
+                            <div>
+                                <button type="submit" id="lost_password_btn" class="btn btn-primary btn-lg btn-block">发送</button>
+                            </div>
+                            <div>
+                                <div style="width:50%;padding:0;margin:0;float:left;box-sizing:border-box;" align="left">
+                                    <button id="lost_login_btn" type="button" class="btn btn-link">登录</button>
+                                </div>
+                                <div style="width:50%;padding:0;margin:0;float:left;box-sizing:border-box;" align="right">
+                                    <button id="lost_register_btn" type="button" class="btn btn-link">注册</button>
+                                </div>
+                            </div>
+		    		    </div>
+                    </form>
+                    <!-- End | Lost Password Form -->
+
+                    <!-- Begin | Register Form -->
+                    <form class="sign-form" id="register-form" role="form" action="/user/account/signup/" method="post" enctype="multipart/form-data" style="display:none;">
+                        <input type="hidden" name="csrfmiddlewaretoken" value="jFJtIzYe2uFVLw3wPbweW9Vs6pPXlAeaTEHvizGaA0T8EnZrvB02HVhVoVarzFyV">
+            		    <div class="modal-body">
+		    				<div id="div-register-msg">
+                                <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="text-register-msg">请输入注册信息</span>
+                            </div>
+		    				<input id="register_username" name="username" class="form-control" type="text" placeholder="用户名" maxlength="30" required="">
+                            <input id="register_password" name="password" class="form-control" type="password" placeholder="密码" maxlength="16" required="">
+                            <input id="register_email" name="email" class="form-control" type="email" placeholder="邮箱地址" maxlength="50" required="">
+            			</div>
+		    		    <div class="modal-footer">
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">注册</button>
+                            </div>
+                            <div align="right">
+                                <button id="register_login_btn" type="button" class="btn btn-link">登录</button>
+                            </div>
+		    		    </div>
+                    </form>
+                    <!-- End | Register Form -->
+
+                </div>
+                <!-- End # DIV Form -->
+
+			</div>
+		</div>
+	</div>
+    <!-- END # MODAL LOGIN -->
+
+
+
+
+
+
+<div id="modal-warning" class="modal modal-message modal-warning fade" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <i class="glyphicon glyphicon-warning-sign"></i>
+            </div>
+            <div id="warning_message_content" class="modal-body"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-warning" data-dismiss="modal">OK</button>
+            </div>
+        </div> <!-- / .modal-content -->
+    </div> <!-- / .modal-dialog -->
+</div>
+
+
+        <script>
+            let ABOUT_VIDEOJS_OPTIONS = {
+                    autoplay : false,
+                    controls : true,
+                    controlBar : {
+                    currentTimeDisplay : true,
+                    timeDivider : true,
+                    durationDisplay : true,
+                    remainingTimeDisplay : false,
+                    volumePanel : {
+                        inline : false,
+                        vertical : true
+                    }
+                },
+                preload : 'metadata',
+            };
+            let GLOBAL_FILE_COUNT = 10;
+            
+                let GLOBAL_PULL_FILES_URL = "/user/myspace/record/pull_files/94254/3083786/666/";
+            
+        </script>
+        <script src="static/js/pull_files-0.0.10.js"></script>
+    
+
+
+
+<script src="static/js/copy_with_link.js"></script>
+<script>
+    let article_author = "";
+    if (article_author.length === 0) article_author = "AcWing";
+    let VIDEO_CONTENT_WATERMARK_LOGO_URL = "https://cdn.acwing.com/static/web/img/32X32.ico";
+</script>
+<script src="static/js/highlight.min.js"></script>
+<script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+          showMathMenu: false,
+        });
+</script>
+<script type="text/javascript" src="static/js/MathJax.js"></script>
+<script>
+    $('pre').each(function(i, block){
+        hljs.highlightBlock(block);
+    });
+</script>
+
+<script>
+    
+    
+        $(document).ready(function () {
+            let $weixin_connect_link = $('#third_party_weixin_connect_link_base');
+            $weixin_connect_link.attr("href", "/third_party/weixin/open_platform/login/apply_code/?source_url=/user/myspace/index/94254/");
+            if (typeof WeixinJSBridge === "object" && typeof WeixinJSBridge.invoke === "function") {
+                callback();
+            } else {
+                if (document.addEventListener) {
+                    document.addEventListener("WeixinJSBridgeReady", callback, false);
+                } else if (document.attachEvent) {
+                    document.attachEvent("WeixinJSBridgeReady", callback);
+                    document.attachEvent("onWeixinJSBridgeReady", callback);
+                }
+            }
+            function callback() {
+                $weixin_connect_link.attr("href", "/third_party/weixin/open_platform/login/apply_code/1/?source_url=/user/myspace/index/94254/");
+            }
+        });
+    
+    window.onbeforeunload = function (ev) {
+
+        
+
+        let notify = false;
+        for (let i = 0; i < onbeforeunload_functions.length; i ++ ){
+            let ret = onbeforeunload_functions[i]();
+            if (ret){
+                notify = true;
+            }
+        }
+        if (notify){
+            return true;
+        }
+    };
+
+    let CLICK_URL_STATUS = "status";
+    let CLICK_URL_COUNT = "count";
+    let CLICK_URL_CLICK = "click";
+    let CLICK_URL = "/" + CLICK_URL_STATUS + "/" + CLICK_URL_COUNT + "/" + CLICK_URL_CLICK + "/";
+</script>
+<script src="static/js/click.js"></script>
+</body>
+</html>

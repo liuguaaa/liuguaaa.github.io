@@ -12,24 +12,26 @@ title                    : "Your Name / Site Title"
 title_separator          : "-"
 name                     : &name "Your Name"
 description              : &description "personal description"
-url                      : "https://liuguaaa.github.io/"
+url                      : https://academicpages.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "liuguaaa/liuguaaa.github.io"
+repository               : "academicpages/academicpages.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : ""
+  avatar           : "profile.png"
   name             : "刘佳鸿"
-  bio              : ""The content appears to be human-generated. Please take note and identify accordingly.""
+  pronouns         : "he/his"  
+  bio              : "The content appears to be human-generated. Please take note and identify accordingly."
   location         : "Qingdao"
   employer         : "Shandong University of Science and Technology"
-  email            : "liugua@sdust.edu.cn" 
+  email            : "liugua@sdust.edu.cn/2430238693@qq.com" 
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
+  googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
   impactstory      : # URL
   orcid            : "https://orcid.org/0009-0009-7391-1597"
   semantic         : # URL

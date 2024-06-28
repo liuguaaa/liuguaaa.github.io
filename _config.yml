@@ -21,7 +21,7 @@ repository               : "liuguaaa/liuguaaa.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "liuguaaa.github.io/images/profile.png"
+  avatar           : ""
   name             : "刘佳鸿"
   bio              : ""The content appears to be human-generated. Please take note and identify accordingly.""
   location         : "Qingdao"

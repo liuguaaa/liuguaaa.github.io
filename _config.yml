@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Your Name / Site Title"
+title                    : ""
 title_separator          : "-"
 name                     : &name "Your Name"
 description              : &description "personal description"
@@ -195,19 +195,19 @@ kramdown:
 
 
 # Collections
-collections:
-  teaching:
-    output: false
-    permalink: /:collection/:path/
-  publications:
-    output: false
-    permalink: /:collection/:path/
-  portfolio:
-    output: false
-    permalink: /:collection/:path/
-  talks:
-    output: false
-    permalink: /:collection/:path/
+# collections:
+#   teaching:
+#     output: false
+#     permalink: /:collection/:path/
+#   publications:
+#     output: false
+#     permalink: /:collection/:path/
+#   portfolio:
+#     output: false
+#     permalink: /:collection/:path/
+#   talks:
+#     output: false
+#     permalink: /:collection/:path/
 
 
 # Defaults

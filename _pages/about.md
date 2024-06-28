@@ -15,4 +15,4 @@ Hi. I'm Liu Jiahong, currently pursuing my master's degree in the School of Comp
 I look forward to establishing connections with more scholars and developers, jointly advancing academic and technological progress. Thank you for your attention and support.
 
 
-[Email](liugua@sdust.edu.cn) / [Github](https://github.com/liuguaaa)
+[Github](https://github.com/liuguaaa)
